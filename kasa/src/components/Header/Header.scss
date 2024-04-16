@@ -6,10 +6,12 @@ header {
   display: flex;
   justify-content: space-between;
   max-width: 1240px;
-  margin: 45px auto;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
 
-  .logo {
-    width: 180px;
+  .logo-header {
+    width: auto;
   }
 
   .logo img {
@@ -36,10 +38,17 @@ header {
 }
 }
   @media screen and (max-width: 550px) {
-    .banner {
-      .banner-image {
-        height: 150px;
-        }
+    
+    .header {
+      justify-content: center;
+      img {
+        width: auto;
+        height: auto;
+      }
+      li{
+        width: 100%;
+        text-align: center;
+      }
   
     }
 }

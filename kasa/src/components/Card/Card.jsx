@@ -6,7 +6,7 @@ function Card({ cover, title }) {
     <section className="card-logement">
       <img src={cover} alt="location" />
       <div className="card-logement-text">
-        <p className="card-logement-title">{title}</p>
+        <p>{title}</p>
       </div>
     </section>
   );

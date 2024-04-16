@@ -1,13 +1,10 @@
 @import "../../General.scss";
 
 .banner {
-    padding: 20px 20px;
     max-width: 1240px;
+    width: 100%;  
     margin: 0 auto;
     position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
   
     .banner-image {
       height: 220px;
@@ -26,5 +23,16 @@
       transform: translate(-50%, -50%);
       color: $text-color-white;
       z-index: 3;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    .banner {
+      .bannerText {
+        text-align: left;
+        font-size: 0.8rem;
+        left: 40%;
+        text-align: left;
+      }
     }
   }

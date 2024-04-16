@@ -1,4 +1,11 @@
 .about {
     max-width: 1240px;
     margin: auto;
+
+    .collapse-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 82.5%;
+    }
 }

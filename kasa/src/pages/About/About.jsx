@@ -9,9 +9,11 @@ function About() {
   return (
     <div className="about">
       <Banner imageSrc={banner2} />
+      <div className="collapse-container">
       {data.map((item, index) => (
         <Collapse key={index} title={item.aboutTitle} text={item.aboutText} />
       ))}
+      </div>
     </div>
   );
 }

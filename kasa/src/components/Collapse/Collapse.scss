@@ -3,7 +3,7 @@
 .collapse {
   position: relative;
   width: 100%;
-  margin: 35px auto;
+  margin: 15px auto;
 
     &.open {
       .collapse-text {
@@ -11,7 +11,6 @@
         transition: max-height 0.3s ease;
       }
     }
-  
     .collapse-title {
       align-items: center;
       padding: 15px 10px;
