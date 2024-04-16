@@ -1,0 +1,50 @@
+@import "../../General.scss";
+
+.collapse {
+  position: relative;
+  width: 100%;
+  margin: 35px auto;
+
+    &.open {
+      .collapse-text {
+        max-height: 1000px;
+        transition: max-height 0.3s ease;
+      }
+    }
+  
+    .collapse-title {
+      align-items: center;
+      padding: 15px 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      background-color: $background-color-red;
+  
+      h3 {
+        color: $text-color-white;
+      }
+      img {
+        width: 25px;
+        height: 15px;
+      }
+      .chevron {
+          transition: transform 0.2s ease;
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+    
+    }
+  
+    .collapse-text {
+      max-height: 0px;
+      padding: 0 10px;
+      line-height: 25px;
+      border-radius: 5px;
+      background-color: $background-color-grey;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      
+    }
+  }
+

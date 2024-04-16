@@ -1,0 +1,22 @@
+@import "../../General.scss";
+.erreur {
+    align-items: center;
+    text-align: center;
+  
+    h1 {
+      font-size: 20rem;
+      color: $background-color-red;
+      padding: 70px;
+    }
+  
+    p {
+      font-size: 1.5rem;
+      color: $background-color-red;
+      padding-bottom: 30px;
+    }
+  
+    a {
+      color: inherit;
+      border-bottom: 1px solid $border;
+    }
+  }

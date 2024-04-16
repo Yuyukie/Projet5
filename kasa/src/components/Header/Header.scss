@@ -1,14 +1,40 @@
-.banner {
-    padding: 20px 20px;
-    max-width: 1240px;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  
+@import "../../General.scss";
+
+header {
+  background-color: $background-color-white;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 45px auto;
+
+  .logo {
+    width: 180px;
   }
-  
+
+  .logo img {
+    width: 100%;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      list-style-type: none;
+    li {
+      a {
+        color: $text-color-black ;
+        margin-left: 40px;
+       
+        &.active {
+          background-color: $background-color-red;
+          padding: 5px 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+}
   @media screen and (max-width: 550px) {
     .banner {
       .banner-image {
