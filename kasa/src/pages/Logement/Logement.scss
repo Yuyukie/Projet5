@@ -1,75 +1,79 @@
 @import "../../General.scss";
 
-.logement {
+.logement-container {
     max-width: 1240px;
+    padding: 20px;
     margin: auto    ;
 
     .carrousel {
         img {
+            width: 100%;
             border-radius: 25px;
         }
     }
-
-    .logement-info-1{
+    .logement-info {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        
-        .logement-title {
-            h3{
-                color: $text-color-red;
-                font-size: 36px;
-            }
-            p{
-                color: $text-color-black;
-                font-size: 18px;
-            }
-        }
-
-        .logement-host {
+        .logement-info-1{
             display: flex;
-            align-items: center;
-            gap: 20px;
-            p{
-                width: 40px;
-                color: $text-color-red;
-            }
-            img {
-                width: 64px;
-                height: 64px;
-                border-radius: 75px;
-            }
+            justify-content: space-between;
+            margin: 30px 0px 20px 0px;
+                .logement-title {
+                    h3{
+                        color: $text-color-red;
+                        font-size: 36px;
+                    }
+                    p{
+                        color: $text-color-black;
+                        font-size: 18px;
+                    }
+                .tag{
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    height: 25px;
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        height: 25px ;
+                        gap: 10px;
+                        font-size: 14px;
+                        
+                    }
+                    li{
+                        
+                        text-align: center;
+                        padding: 2px 25px;
+                        border-radius: 10px;
+                        background-color: $background-color-red;
+                        color: $text-color-white;
+                        font-size: 14px;
+                    }
+                }
+            }    
         }
-    }
-    .logement-info-2{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 24px;
-        .tag{
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 20px;
-            height: 25px;
-            ul{
+        .logement-info-2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30%;
+            margin: 30px 0px 20px 0px;
+            
+            .logement-host {
                 display: flex;
-                flex-direction: row;
-                height: 25px ;
+                align-items: center;
                 gap: 10px;
-                font-size: 14px;
-                
-            }
-            li{
-                
-                text-align: center;
-                padding: 2px 25px;
-                border-radius: 10px;
-                background-color: $background-color-red;
-                color: $text-color-white;
-                font-size: 12px;
+                p{
+                    width: 60px;
+                    color: $text-color-red;
+                }
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 75px;
+                }
             }
         }
     }
-
     .collapse-logement {
         display: flex;
         gap: 76px;
@@ -80,6 +84,70 @@
         .description {
             width: 50%;
         }
-    }
+    }  
 }
 
+
+@media screen and (max-width: 768px) {
+    .logement-container{
+        .logement-info {
+            flex-direction: column;
+            align-items: center;
+            
+            .logement-info-1{
+                width: 100%;
+                margin-bottom: 0px;
+                .logement-title{
+                    width: 100%;
+                    h3{
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+                .tag{
+                    margin-top: 10px ;
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        height: 25px ;
+                        gap: 10px;
+                        font-size: 14px;
+                        
+                    }
+                    li{
+                        
+                        text-align: center;
+                        padding: 2px 10px;
+                        border-radius: 10px;
+                        background-color: $background-color-red;
+                        color: $text-color-white;
+                        font-size: 14px;
+                    }
+                }
+            }
+        
+            .logement-info-2{
+                flex-direction: row-reverse ;
+                width: 100%;
+                align-items: center;
+                margin-top: 16px;
+        }
+    }
+        .collapse-logement{
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            .description {
+                width: 100%;
+            }
+            .equipements{
+                width: 100%;
+            }
+        }
+
+    }
+
+}

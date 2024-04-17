@@ -3,7 +3,7 @@ import arrow from "./Vector.png";
 import "./Collapse.scss";
 import "../../General.scss"
 
-function Collapse ({title, text}) {
+function Collapse ({title, text, fontSize}) {
 const [isOpen, setIsOpen] = useState(false)
 
 
@@ -14,8 +14,8 @@ const toggleCollapse = () => {
 ;
 
 return (
-    <div className={`collapse ${isOpen ? "open" : ""}`}>
-      <div className="collapse-title">
+    <div className={`collapse ${isOpen ? "open" : ""}`} >
+      <div className="collapse-title"style={{ fontSize: fontSize }}>
         <h3>{title}</h3>
         <img src={arrow} alt="fleche" className={`chevron ${isOpen ? "open" : ""}`} onClick={toggleCollapse}/>
       </div>

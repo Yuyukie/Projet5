@@ -20,34 +20,36 @@ function Logement() {
   const elementWithPictures = data.filter((element) => element.id === id)[0];
 
   return (
-    <div className="logement">
+    <div className="logement-container">
       <div className="carrousel">  
         <Carousel pictures={elementWithPictures ? elementWithPictures.pictures : []} />
       </div>
-      <div className="logement-info-1">
-        <div className="logement-title">
-          <h3>{logementId.title}</h3>
-          <p>{logementId.location}</p>
+      <div className="logement-info">
+        <div className="logement-info-1">
+          <div className="logement-title">
+            <h3>{logementId.title}</h3>
+            <p>{logementId.location}</p>
+            <div className="tag">
+              {logementId.tags && (
+                <ul>
+                  {logementId.tags.map((tag, index) => (
+                    <li key={index}>{tag}</li>
+                  ))}
+                </ul>)
+              }
+            </div>
+          </div>
         </div>
-        <div className="logement-host">
-          <p>{logementId.host.name}</p>
-          <img src={logementId.host.picture} alt="Portrait du proprietaire" />
+        <div className="logement-info-2">
+          <div className="logement-host">
+            <p>{logementId.host.name}</p>
+            <img src={logementId.host.picture} alt="Portrait du proprietaire" />
+          </div>
+          <div className="note">
+            <Note rating={logementId.rating} />
+          </div>
         </div>
-      </div>
-      <div className="logement-info-2">
-        <div className="tag">
-          {logementId.tags && (
-            <ul>
-              {logementId.tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-        <div className="note">
-          <Note rating={logementId.rating} />
-        </div>
-      </div>
+      </div>  
       <div className="collapse-logement">
         <div className="description"> 
           <Description logementId={id} />
