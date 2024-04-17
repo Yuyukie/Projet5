@@ -52,3 +52,11 @@
     }
   }
 
+  @media screen and (max-width: 768px) {
+
+    .collapse {
+      .collapse-title {
+        font-size: 12px;
+      }
+    }
+  }

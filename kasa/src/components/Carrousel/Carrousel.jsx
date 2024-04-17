@@ -3,12 +3,10 @@ import next from "./arrow-next.png";
 import previous from "./arrow-previous.png";
 import "./Carrousel.scss";
 
-function Carrousel ({pictures}) {
+function Carrousel({ pictures }) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [totalSlides, setTotalSlides] = useState(pictures.length);
     const showControls = totalSlides > 1;
-
-
 
     const goToNextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
@@ -30,7 +28,11 @@ function Carrousel ({pictures}) {
                     <img src={previous} alt="fleche retour" />
                 </div>
             )}
-            <img src={pictures[currentSlide]} alt={`Slide ${currentSlide}`} className="carrousel-image" />
+            <img
+                src={pictures[currentSlide]}
+                alt={`Slide ${currentSlide}`}
+                className="carrousel-image" // Ajout de la classe carrousel-image ici
+            />
 
             {showControls && (
                 <div className="arrow arrow-right" onClick={goToNextSlide}>
@@ -43,7 +45,7 @@ function Carrousel ({pictures}) {
                 </div>
             )}
         </div>
-    )
+    );
 }
 
 export default Carrousel;
