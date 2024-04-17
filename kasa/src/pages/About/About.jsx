@@ -6,9 +6,10 @@ import Collapse from "../../components/Collapse/Collapse";
 import "./About.scss"
 
 function About() {
+  const opacityValue = 0.7;
   return (
     <div className="about">
-      <Banner imageSrc={banner2} />
+      <Banner imageSrc={banner2} opacite={opacityValue}/>
       <div className="collapse-container">
       {data.map((item, index) => (
         <Collapse key={index} title={item.aboutTitle} text={item.aboutText} />

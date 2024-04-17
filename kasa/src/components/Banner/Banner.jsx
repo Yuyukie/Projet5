@@ -1,15 +1,22 @@
 import React from "react";
-import "./Banner.scss"
+import "./Banner.scss";
 
-function Banner({ imageSrc, title }) {
-    return (
-      <div className="banner">
-        <img src={imageSrc} alt="img" className="banner-image" />
-        <div className="bannerText">
-          <h1>{title}</h1>
-        </div>
+function Banner({ imageSrc, title, opacite }) {
+
+  const content = React.createElement('h1', { dangerouslySetInnerHTML: { __html: title } });
+  const style = {
+    opacity: opacite,
+  };
+
+  return (
+    <div className="banner" >
+      <div className="overlay" ></div>
+      <img src={imageSrc} alt="img" className="banner-image" style={style} />
+      <div className="bannerText">
+        {content}
       </div>
-    );
-  }
-  
-  export default Banner;
+    </div>
+  );
+}
+
+export default Banner;

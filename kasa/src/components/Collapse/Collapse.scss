@@ -3,12 +3,10 @@
 .collapse {
   position: relative;
   width: 100%;
-  
-
-    &.open {
+    &.open { 
+      
       .collapse-text {
         max-height: 1000px;
-        transition: max-height 0.3s ease;
 
         ul{
           margin: 10px;
@@ -35,8 +33,9 @@
       }
       .chevron {
           transition: transform 0.2s ease;
+          cursor: pointer;
         &.open {
-          transform: rotate(180deg);
+          transform: rotate(-180deg);
         }
       }
     
@@ -49,6 +48,7 @@
       border-radius: 5px;
       background-color: $background-color-grey;
       overflow: hidden;
+      transition: max-height 0.5s ease;
     }
   }
 

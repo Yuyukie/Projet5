@@ -4,6 +4,12 @@
     max-width: 1240px;
     margin: auto    ;
 
+    .carrousel {
+        img {
+            border-radius: 25px;
+        }
+    }
+
     .logement-info-1{
         display: flex;
         justify-content: space-between;

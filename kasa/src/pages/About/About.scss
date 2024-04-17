@@ -1,7 +1,7 @@
 .about {
     max-width: 1240px;
     margin: auto;
-    padding:  18px 20px 0px 20px;
+    padding: 0px 20px;
     
 
     .collapse-container {
@@ -10,5 +10,14 @@
         margin: 38px auto;
         width: 82.5%;
         gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about{
+        .collapse-container {
+            margin: 38px auto;
+            width: 100%;
+        }
     }
 }
