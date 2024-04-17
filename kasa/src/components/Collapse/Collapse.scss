@@ -16,11 +16,14 @@
       }
     }
     .collapse-title {
-      align-items: center;
-      padding: 15px 10px;
-      border-radius: 5px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 34.22px;
+      padding: 15px 10px;
+      border-radius: 5px;
       background-color: $background-color-red;
   
       h3 {
@@ -46,8 +49,6 @@
       border-radius: 5px;
       background-color: $background-color-grey;
       overflow: hidden;
-      transition: max-height 0.3s ease;
-      
     }
   }
 

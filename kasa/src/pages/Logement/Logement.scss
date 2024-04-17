@@ -40,17 +40,22 @@
         justify-content: space-between;
         margin-bottom: 24px;
         .tag{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            height: 25px;
             ul{
                 display: flex;
                 flex-direction: row;
-                gap: 30px;
+                height: 25px ;
+                gap: 10px;
                 font-size: 14px;
                 
             }
             li{
-                width: auto;
-                padding: 10px;
+                
                 text-align: center;
+                padding: 2px 25px;
                 border-radius: 10px;
                 background-color: $background-color-red;
                 color: $text-color-white;

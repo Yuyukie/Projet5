@@ -14,24 +14,23 @@ header {
     width: auto;
   }
 
-  .logo img {
-    width: 100%;
-  }
-
   nav {
     ul {
       display: flex;
       list-style-type: none;
     li {
       a {
+        font-size: 24px ;
+        font-weight: 500;
+        line-height: 34.22px;
         color: $text-color-black ;
         margin-left: 40px;
         &.active {
-          background-color: $background-color-red;
           padding: 5px 10px;
           border-radius: 10px;
-          box-shadow: 0px 4px 4px 0px #00000040;
-            color: $text-color-white;
+          @include box-shadow;
+          background-color: $background-color-red;
+          color: $text-color-white;
         }
       }
     }

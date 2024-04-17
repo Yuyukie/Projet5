@@ -2,18 +2,24 @@
 
 .footer {
     width: 100%;
-    margin: 50px auto 0px;
-    padding: 50px 0 100px;
+    height: 209px;
+    margin: 50px auto ;
+    
     background-color: $background-color-black;
     color: $text-color-white;
     align-items: center;
     justify-content: center;
     text-align: center;
   
-    img {
-      margin-top: 30px;
-      width: 100px;
-      margin-bottom: 15px;
+    .logo-footer {
+      padding-top: 66px;
+      margin-bottom: 28.6px;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 34.2px;
     }
   
   }
