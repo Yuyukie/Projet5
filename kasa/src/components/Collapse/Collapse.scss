@@ -1,62 +1,89 @@
 @import "../../General.scss";
 
 .collapse {
-  position: relative;
   width: 100%;
-    &.open { 
-      
-      .collapse-text {
-        max-height: 1000px;
 
-        ul{
-          margin: 10px;
-        }
+  &.open {
+
+    .collapse-text {
+      max-height: 1000px;
+
+      ul {
+        margin: 10px;
       }
     }
-    .collapse-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  }
+
+  .collapse-title {
+    position: relative; 
+    z-index: 11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    border: none;
+    cursor: pointer;
+    background-color: $background-color-red;
+
+    h3 {
       font-size: 24px;
       font-weight: 700;
-      line-height: 34.22px;
-      padding: 15px 10px;
-      border-radius: 5px;
-      background-color: $background-color-red;
-  
-      h3 {
-        color: $text-color-white;
+      color: $text-color-white;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
       }
-      img {
-        width: 25px;
-        height: 15px;
-      }
-      .chevron {
-          transition: transform 0.2s ease;
-          cursor: pointer;
-        &.open {
-          transform: rotate(-180deg);
-        }
-      }
-    
     }
-  
-    .collapse-text {
-      max-height: 0px;
-      padding: 0 10px;
-      line-height: 25px;
-      border-radius: 5px;
-      background-color: $background-color-grey;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
+
+    .chevron {
+      font-size: 24px;
+      color: white;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+
+      &.open {
+        transform: rotate(-180deg);
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
+
   }
 
-  @media screen and (max-width: 768px) {
+  .collapse-text {
+    position: relative;
+    z-index: 9;
+    max-height: 0;
+    margin: -8px 0 0 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background-color: $background-color-grey;
+    border-radius: 0 0 10px 10px;
 
-    .collapse {
-      .collapse-title {
-        font-size: 12px;
-      }
+    &.open {
+      transition: max-height 5s ease;
+      max-height: 1000px;
+    }
+
+    & .collapse-content { 
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .collapse {
+    .collapse-title {
+      font-size: 12px;
     }
   }
+}

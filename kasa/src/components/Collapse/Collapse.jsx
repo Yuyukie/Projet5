@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import arrow from "./Vector.png";
 import "./Collapse.scss";
 import "../../General.scss"
 
@@ -14,15 +13,19 @@ const toggleCollapse = () => {
 ;
 
 return (
-    <div className={`collapse ${isOpen ? "open" : ""}`} >
-      <div className="collapse-title"style={{ fontSize: fontSize }}>
-        <h3>{title}</h3>
-        <img src={arrow} alt="fleche" className={`chevron ${isOpen ? "open" : ""}`} onClick={toggleCollapse}/>
-      </div>
-      <div className="collapse-text">
-        <ul>{text}</ul>
-      </div>
-    </div>
+  <div className={`collapse ${isOpen ? "open" : ""}`}>
+  <button
+    className="collapse-title"
+    style={{ fontSize: fontSize }}
+    onClick={toggleCollapse}
+  >
+    <h3>{title}</h3>
+    <i class={`fa-solid fa-chevron-up chevron ${isOpen ? "open" : ""}`}></i>
+  </button>
+  <div className={`collapse-text ${isOpen ? "open" : ""}`}>
+    <div className={`collapse-content ${isOpen ? "open" : ""}`}>{text}</div>
+  </div>
+</div>
   );
 }
 
