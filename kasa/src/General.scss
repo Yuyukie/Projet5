@@ -11,6 +11,7 @@ $border : black;
   box-shadow: 0px 4px 4px 0px #00000040;
 }
 
+
 * {
     list-style: none;
     box-sizing: border-box;
@@ -18,4 +19,9 @@ $border : black;
     margin: 0;
     font-family: "Montserrat";
     text-decoration: none;
+      #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
   }
