@@ -7,21 +7,23 @@
     .logement-info-1{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         
         .logement-title {
             h3{
-                color: $text-color-red
+                color: $text-color-red;
+                font-size: 36px;
             }
             p{
                 color: $text-color-black;
+                font-size: 18px;
             }
         }
 
         .logement-host {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
             p{
                 width: 40px;
                 color: $text-color-red;
@@ -36,11 +38,13 @@
     .logement-info-2{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 24px;
         .tag{
             ul{
                 display: flex;
                 flex-direction: row;
                 gap: 30px;
+                font-size: 14px;
                 
             }
             li{
@@ -50,6 +54,7 @@
                 border-radius: 10px;
                 background-color: $background-color-red;
                 color: $text-color-white;
+                font-size: 12px;
             }
         }
     }

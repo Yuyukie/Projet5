@@ -1,9 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import "./Logement.scss"
 
 import data from "../../data/data.json";
-import Erreur404 from "../../components/Erreur404/Erreur404";
 import Description from "../../components/Description/Description";
 import Equipements from "../../components/Equipements/Equipement";
 import Carousel from "../../components/Carrousel/Carrousel";
@@ -14,7 +13,7 @@ function Logement() {
   const logementId = data.find((log) => log.id === id);
 
   if (!logementId) {
-    return <Erreur404 />;
+    return <Navigate to="/Erreur404" />;
   }
 
  

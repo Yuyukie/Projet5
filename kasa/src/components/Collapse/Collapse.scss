@@ -3,12 +3,16 @@
 .collapse {
   position: relative;
   width: 100%;
-  margin: 15px auto;
+  
 
     &.open {
       .collapse-text {
         max-height: 1000px;
         transition: max-height 0.3s ease;
+
+        ul{
+          margin: 10px;
+        }
       }
     }
     .collapse-title {

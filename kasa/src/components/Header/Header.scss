@@ -26,11 +26,12 @@ header {
       a {
         color: $text-color-black ;
         margin-left: 40px;
-       
         &.active {
           background-color: $background-color-red;
           padding: 5px 10px;
           border-radius: 10px;
+          box-shadow: 0px 4px 4px 0px #00000040;
+            color: $text-color-white;
         }
       }
     }
