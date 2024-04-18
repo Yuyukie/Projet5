@@ -21,9 +21,7 @@ function Logement() {
 
   return (
     <div className="logement-container">
-      <div className="carrousel">  
         <Carousel pictures={elementWithPictures ? elementWithPictures.pictures : []} />
-      </div>
       <div className="logement-info">
         <div className="logement-info-1">
           <div className="logement-title">

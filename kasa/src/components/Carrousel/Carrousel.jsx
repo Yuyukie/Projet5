@@ -28,12 +28,15 @@ function Carrousel({ pictures }) {
                     <img src={previous} alt="fleche retour" />
                 </div>
             )}
+            {pictures.map((picture, index) => (
             <img
-                src={pictures[currentSlide]}
-                alt={`Slide ${currentSlide}`}
-                className="carrousel-image" // Ajout de la classe carrousel-image ici
+                key={index}
+                src={picture}
+                alt={`Slide ${index}`}
+                className="carrousel-image"
+                style={{ transform: `translateX(${100 *currentSlide}%)`}}
             />
-
+            ))}
             {showControls && (
                 <div className="arrow arrow-right" onClick={goToNextSlide}>
                     <img src={next} alt="fleche suivant" />
