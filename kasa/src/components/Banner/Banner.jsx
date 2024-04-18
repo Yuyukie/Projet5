@@ -3,7 +3,6 @@ import "./Banner.scss";
 
 function Banner({ imageSrc, title, opacite }) {
 
-  const content = React.createElement('h1', { dangerouslySetInnerHTML: { __html: title } });
   const style = {
     opacity: opacite,
   };
@@ -13,7 +12,7 @@ function Banner({ imageSrc, title, opacite }) {
       <div className="overlay" ></div>
       <img src={imageSrc} alt="img" className="banner-image" style={style} />
       <div className="bannerText">
-        {content}
+        <h1>{title}</h1>
       </div>
     </div>
   );

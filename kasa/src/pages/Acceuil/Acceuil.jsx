@@ -10,7 +10,7 @@ function Home() {
   const opacityValue = 0.4;
   return (
     <div className="acceuil-container">
-        <Banner imageSrc={banner1} title="Chez vous, <span> partout et ailleurs</span>" opacite={opacityValue} />
+        <Banner imageSrc={banner1} title={<>Chez vous, <span> partout et ailleurs</span></>} opacite={opacityValue} />
       <div className="card-container">
         {data.map((property) => (
           <Link key={property.id} to={`/logement/${property.id}`}>
