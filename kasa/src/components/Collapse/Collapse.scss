@@ -2,17 +2,17 @@
 
 .collapse {
   width: 100%;
+    &.open {
+      .collapse-text {
+        max-height: 1000px;
 
-  &.open {
+        ul {
+          margin: 10px;
+        }
 
-    .collapse-text {
-      max-height: 1000px;
 
-      ul {
-        margin: 10px;
       }
     }
-  }
 
   .collapse-title {
     position: relative; 
@@ -28,30 +28,22 @@
     cursor: pointer;
     background-color: $background-color-red;
 
-    h3 {
-      font-size: 24px;
-      font-weight: 700;
-      color: $text-color-white;
-
-      @media (max-width: 768px) {
-        font-size: 14px;
-      }
-    }
-
-    .chevron {
-      font-size: 24px;
-      color: white;
-      transition: transform 0.2s ease;
-      cursor: pointer;
-
-      &.open {
-        transform: rotate(-180deg);
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: $text-color-white;
       }
 
-      @media (max-width: 768px) {
-        font-size: 14px;
+      .chevron {
+        font-size: 24px;
+        color: white;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+
+          &.open {
+            transform: rotate(-180deg);
+          }
       }
-    }
 
   }
 
@@ -64,13 +56,12 @@
     transition: max-height 0.5s ease;
     background-color: $background-color-grey;
     border-radius: 0 0 10px 10px;
+      &.open {
+        transition: max-height 5s ease;
+        max-height: 1000px;
+      }
 
-    &.open {
-      transition: max-height 5s ease;
-      max-height: 1000px;
-    }
-
-    & .collapse-content { 
+    .collapse-content { 
       display: flex;
       flex-direction: column;
       padding: 20px;
@@ -83,7 +74,12 @@
 
   .collapse {
     .collapse-title {
-      font-size: 12px;
+      .h3{
+        font-size: 12px;
+      }
+      .chevron{
+        font-size: 14px;
+      }
     }
   }
 }

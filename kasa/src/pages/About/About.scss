@@ -3,14 +3,13 @@
     margin: 0px auto;
     padding: 0px 20px;
     
-
-    .collapse-container {
-        display: flex;
-        flex-direction: column;
-        margin: 38px auto;
-        width: 82.5%;
-        gap: 30px;
-    }
+        .collapse-container {
+            display: flex;
+            flex-direction: column;
+            margin: 38px auto;
+            width: 82.5%;
+            gap: 30px;
+        }
 }
 
 @media screen and (max-width: 768px) {

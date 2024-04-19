@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <img src={logo} alt="Logo Kasa rouge" />
-      <nav>
+      <nav className='navbar'>
         <ul>
           <li>
             <NavLink exact="true" to="/" activeclassname="active">Accueil</NavLink>

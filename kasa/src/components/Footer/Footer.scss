@@ -10,16 +10,16 @@
     justify-content: center;
     text-align: center;
   
-    .logo-footer {
-      padding-top: 66px;
-      margin-bottom: 28.6px;
-    }
+      .logo-footer {
+        padding-top: 66px;
+        margin-bottom: 28.6px;
+      }
 
-    p {
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 34.2px;
-    }
+      p {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34.2px;
+      }
   
   }
   
@@ -27,17 +27,17 @@
     .footer {
       margin-top: 27px;
 
-      .logo-footer{
-        margin-bottom: 0px;
-      }
-      
-      p {
-        font-size: 12px;
-        margin: auto;
-          span{
-            display: flex;
-            justify-content: center;
-          }
-      }
+        .logo-footer{
+          margin-bottom: 0px;
+        }
+        
+        p{
+          font-size: 12px;
+          margin: auto;
+            span{
+              display: flex;
+              justify-content: center;
+            }
+        }
     }
-  }
+}

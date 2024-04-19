@@ -21,64 +21,64 @@
                         color: $text-color-black;
                         font-size: 18px;
                     }
-                .tag{
-                    font-size: 14px;
-                    font-weight: 700;
-                    line-height: 20px;
-                    height: 25px;
-                    ul{
-                        display: flex;
-                        flex-direction: row;
-                        height: 25px ;
-                        gap: 10px;
+
+                    .tag{
                         font-size: 14px;
-                        
+                        font-weight: 700;
+                        line-height: 20px;
+                        height: 25px;
+                            ul{
+                                display: flex;
+                                flex-direction: row;
+                                height: 25px ;
+                                gap: 10px;
+                                font-size: 14px;
+                            }
+                            li{
+                                
+                                text-align: center;
+                                padding: 2px 25px;
+                                border-radius: 10px;
+                                background-color: $background-color-red;
+                                color: $text-color-white;
+                                font-size: 14px;
+                            }
                     }
-                    li{
-                        
-                        text-align: center;
-                        padding: 2px 25px;
-                        border-radius: 10px;
-                        background-color: $background-color-red;
-                        color: $text-color-white;
-                        font-size: 14px;
-                    }
-                }
-            }    
+                }    
         }
         .logement-info-2{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
             margin: 30px 0px 20px 0px;
             
             .logement-host {
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                p{
-                    width: 60px;
-                    color: $text-color-red;
-                }
-                img {
-                    width: 64px;
-                    height: 64px;
-                    border-radius: 75px;
-                }
+                    p{
+                        width: 60px;
+                        color: $text-color-red;
+                    }
+                    img {
+                        width: 64px;
+                        height: 64px;
+                        border-radius: 75px;
+                    }
             }
         }
     }
+
     .collapse-logement {
         display: flex;
         gap: 76px;
 
-        .equipements {
-            width: 50%;
-        }
-        .description {
-            width: 50%;
-        }
+            .equipements {
+                width: 50%;
+            }
+            .description {
+                width: 50%;
+            }
     }  
 }
 
