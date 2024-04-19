@@ -29,8 +29,25 @@
     }
 }
 
-@media screen and (max-width: 950px) {
-    .card-container {
+@media screen and (max-width: 1000px) {
+    .acceuil-container{
+        .card-container {
+        width: 100%;
+        height: auto;
+        background-color: $background-color-white;
+        padding: 0px;
+        gap: 20px;
+        
+            a{
+            width: 40%;
+            } 
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .acceuil-container{
+        .card-container {
         width: 100%;
         height: auto;
         background-color: $background-color-white;
@@ -41,4 +58,7 @@
             width: 100%;
             } 
         }
+    }
 }
+    
+    
