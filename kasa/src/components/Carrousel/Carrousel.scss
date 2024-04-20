@@ -19,23 +19,20 @@
             height: 100%; // Pour que la hauteur de l'image soit ajustée en fonction de la largeur
             object-fit: cover;
         }
-
     }
 
-    
     .arrow {
         position: absolute;
-        top: 50%;
+        top: 40%;
         cursor: pointer;
         z-index: 1;
-    }
+            &.arrow-left {
+                left: 10px;
+            }
 
-    .arrow-left {
-        left: 10px;
-    }
-
-    .arrow-right {
-        right: 10px;
+            &.arrow-right {
+                right: 10px;
+            }
     }
 
     .image-number {
@@ -50,4 +47,14 @@
         border-radius: 5px;
         padding: 1px 5px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .carrousel{
+        height: 255px;
+        .image-number{
+            display: none;
+        }
+    }
+
 }

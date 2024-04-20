@@ -5,7 +5,6 @@
     &.open {
       .collapse-text {
         max-height: 1000px;
-
         ul {
           margin: 10px;
         }
@@ -20,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px;
+    padding: 10px 10px;
     border-radius: 5px;
     width: 100%;
     height: auto;
@@ -73,9 +72,10 @@
 @media screen and (max-width: 768px) {
 
   .collapse {
+    
     .collapse-title {
-      .h3{
-        font-size: 12px;
+      h3{
+        font-size: 14px;
       }
       .chevron{
         font-size: 14px;
