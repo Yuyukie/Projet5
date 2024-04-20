@@ -2,42 +2,49 @@
 
 .logement-container {
     max-width: 1240px;
+    height: auto;
     padding: 20px;
     margin: auto    ;
 
     .logement-info {
         display: flex;
         justify-content: space-between;
+        height: auto;
         .logement-info-1{
             display: flex;
             justify-content: space-between;
             margin: 30px 0px 20px 0px;
+            height: auto;
                 .logement-title {
+                    height: auto;
                     h3{
+                        height: auto;
                         color: $text-color-red;
                         font-size: 36px;
                     }
                     p{
+                        height: auto;
                         color: $text-color-black;
                         font-size: 18px;
                     }
 
                     .tag{
-                        display: flex;
-                        flex-wrap: wrap;
+                        height: auto;
+                        width: 100%;
                         font-size: 14px;
                         font-weight: 700;
                         line-height: 20px;
-                        height: 25px;
-                            ul{
+                    
+                            ul{     
+                                height: auto;  
                                 display: flex;
-                                flex-direction: row;
-                                height: 25px ;
+                                flex-wrap: wrap;
                                 gap: 10px;
                                 font-size: 14px;
                             }
                             li{
-                                
+                                height: 25px ;
+                               
                                 text-align: center;
                                 padding: 2px 25px;
                                 border-radius: 10px;
@@ -53,16 +60,20 @@
             flex-direction: column;
             justify-content: space-between;
             margin: 30px 0px 20px 0px;
+            height: auto;
             
             .logement-host {
                 display: flex;
                 align-items: center;
+                height: auto;
                 gap: 10px;
                     p{
+                        height: auto;
                         width: 60px;
                         color: $text-color-red;
                     }
                     img {
+                        height: auto;   
                         width: 64px;
                         height: 64px;
                         border-radius: 75px;
