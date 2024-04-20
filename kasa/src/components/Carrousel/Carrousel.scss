@@ -52,6 +52,11 @@
 @media screen and (max-width: 768px) {
     .carrousel{
         height: 255px;
+        .arrow {
+          img{
+            height: 30px;
+          }
+        }
         .image-number{
             display: none;
         }
