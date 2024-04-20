@@ -1,48 +1,53 @@
-@import "../../General.scss";
+@import "../../General.scss" ;
 
-.carrousel {   
+.carrousel {
     position: relative;
-    width: 100%; 
+    width: 100%;
     height: 415px;
-    margin: auto; 
+    margin: auto;
     border-radius: 15px;
+    overflow: hidden; // Pour cacher les images qui dépassent
 
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            z-index: 1; 
-
-                &.arrow-left {
-                    left: 10px;
-                }
-                
-                &.arrow-right {
-                    right: 10px;
-                }
-        }
-        
+    .carrousel-images {
+        display: flex; // Utilisation de flexbox pour aligner les images horizontalement
+        transition: transform 0.5s ease; // Animation de transition pour le glissement
+        width: 100%;
+        height: 100%;
         .carrousel-image {
-            height: 100%;
-            width: 100%;
+            flex: 0 0 100%;
+            width: 100%; // Pour que chaque image prenne la largeur complète du conteneur
+            height: 100%; // Pour que la hauteur de l'image soit ajustée en fonction de la largeur
             object-fit: cover;
-            border-radius: 15px; 
-        
-                .image-number {
-                    position: absolute;
-                    top: 90%;
-                    right: 50%;
-                    color: $text-color-white;
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    font-size: 20px;
-                    z-index: 1; 
-                }
         }
+
+    }
+
+    
+    .arrow {
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .arrow-left {
+        left: 10px;
+    }
+
+    .arrow-right {
+        right: 10px;
+    }
+
+    .image-number {
+        position: absolute;
+        color: $text-color-white;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 20px;
+        font-weight: 700;
+        z-index: 100;
+        border-radius: 5px;
+        padding: 1px 5px;
+    }
 }
-
-
-
-
-
