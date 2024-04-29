@@ -9,15 +9,17 @@ import Carousel from "../../components/Carrousel/Carrousel";
 import Note from "../../components/Note/Note"
 
 function Logement() {
-  const { id } = useParams();
-  const logementId = data.find((log) => log.id === id);
 
-  if (!logementId) {
-    return <Navigate to="/Erreur404" />;
-  }
+const { id } = useParams();
 
- 
-  const elementWithPictures = data.filter((element) => element.id === id)[0];
+const logementId = data.find((log) => log.id === id);
+
+
+if (!logementId) {
+  return <Navigate to="/Erreur404" />;
+}
+
+const elementWithPictures = data.filter((element) => element.id === id)[0];
 
   return (
     <div className="logement-container">

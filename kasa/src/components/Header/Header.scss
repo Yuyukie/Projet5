@@ -37,10 +37,6 @@
 
                   &.active {
                     padding: 5px 10px;
-                    border-radius: 10px;
-                    @include box-shadow;
-                    background-color: $background-color-red;
-                    color: $text-color-white; 
                     text-decoration: underline;
                   }
               }
